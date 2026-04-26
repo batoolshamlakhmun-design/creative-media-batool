@@ -27,28 +27,34 @@
         /* الهيدر: تم إصلاح الخلفية لإظهار الصورة الجماعية */
       /* ابحثي عن قسم header في الـ CSS واستبدليه بهذا للتأكد من عمل الصورة */
 header {
-    height: 100vh;
+    /* يجعل الارتفاع 100% من طول الشاشة على الكمبيوتر ومرن على التلفون */
+    min-height: 100vh; 
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    /* تأكدي أن اسم الصورة picture.jpg أو picture.png حسب ما هو موجود بمجلد مشروعك */
-    background: linear-gradient(to bottom, rgba(12, 1, 41, 0.6), var(--dark)),
-                url('picture.png'); 
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* تعطي تأثير بارالاكس جميل عند التمرير */
-    position: relative;
+    
+    /* التعديلات الأساسية لتصغير الصورة حسب الشاشة */
+    background: linear-gradient(to bottom, rgba(12, 1, 41, 0.7), var(--dark)),
+                url('picture.png');
+    background-size: cover;      /* أهم سطر: يجعل الصورة تغطي المساحة وتصغر معها */
+    background-position: center; /* يبقي مركز الصورة (الوجوه) في المنتصف */
+    background-repeat: no-repeat;
 }
-        header h1 {
-            font-size: clamp(2.5rem, 8vw, 5rem);
-            font-weight: 900;
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 15px;
-        }
+
+/* إضافة تنسيق خاص للشاشات الصغيرة (التلفون) */
+@media (max-width: 768px) {
+    header {
+        height: 60vh; /* تقليل الارتفاع على التلفون لتبدو الصورة متناسقة أكثر */
+        background-attachment: scroll; /* أفضل للأداء على الموبايل */
+    }
+    
+    header h1 {
+        font-size: 2.5rem; /* تصغير حجم العنوان ليناسب شاشة الموبايل */
+    }
+}
 
         header p {
             font-size: 1.5rem;
