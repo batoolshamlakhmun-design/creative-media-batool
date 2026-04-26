@@ -94,6 +94,31 @@
         .signature { font-size: 1.5rem; font-weight: 900; background: linear-gradient(45deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
         @media (max-width: 992px) { .about-section { grid-template-columns: 1fr; } .about-image-placeholder { height: 250px; order: 2; } }
+        /* كود ملاءمة الصورة الجماعية للهواتف */
+@media (max-width: 768px) {
+    header {
+        /* يجعل ارتفاع منطقة الصورة مناسباً لشاشة الموبايل العرضية */
+        height: 50vh !important; 
+        min-height: 300px;
+        
+        /* يضمن تصغير الصورة لتظهر الوجوه في المنتصف */
+        background-size: cover !important;
+        background-position: center center !important;
+        
+        /* يحسن الأداء على الهواتف */
+        background-attachment: scroll !important;
+    }
+
+    header h1 {
+        /* تصغير العنوان ليناسب عرض الشاشة الصغير */
+        font-size: 2.2rem !important;
+    }
+    
+    header p {
+        font-size: 1rem !important;
+        padding: 0 20px;
+    }
+}
     </style>
 </head>
 <body>
