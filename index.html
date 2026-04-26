@@ -157,10 +157,10 @@ header {
     <div id="edit-modal" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('edit-modal')">&times;</span><h2 style="color:var(--primary)">معرض المونتاج</h2><div class="modal-gallery">
         <!-- فيديوهات يوتيوب الكاملة كما طلبتِ -->
         <div class="gallery-item-wrapper"><div class="gallery-box"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/RVUjh6l1sXk" frameborder="0" allowfullscreen></iframe></div><div class="gallery-label">فيلم وثائقي</div></div>
-        <div class="gallery-item-wrapper"><div class="gallery-box"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/cfjknpdPhEs" frameborder="0" allowfullscreen></iframe></div><div class="gallery-label">فيديو ترويجي</div></div>
-        <div class="gallery-item-wrapper"><div class="gallery-box"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/VfVMnirdiEM" frameborder="0" allowfullscreen></iframe></div><div class="gallery-label">تعديل ألوان</div></div>
-        <div class="gallery-item-wrapper"><div class="gallery-box"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/OHOGiySENuc" frameborder="0" allowfullscreen></iframe></div><div class="gallery-label">مشروع مونتاج</div></div>
-        <div class="gallery-item-wrapper"><div class="gallery-box"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/I1AGQW1CHcc" frameborder="0" allowfullscreen></iframe></div><div class="gallery-label">هندسة صوت</div></div>
+        <div class="gallery-item-wrapper"><div class="gallery-box"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/cfjknpdPhEs" frameborder="0" allowfullscreen></iframe></div><div class="gallery-label">كواليس</div></div>
+        <div class="gallery-item-wrapper"><div class="gallery-box"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/VfVMnirdiEM" frameborder="0" allowfullscreen></iframe></div><div class="gallery-label">فيديو ترويجي</div></div>
+        <div class="gallery-item-wrapper"><div class="gallery-box"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/OHOGiySENuc" frameborder="0" allowfullscreen></iframe></div><div class="gallery-label">هندسة صوت</div></div>
+        <div class="gallery-item-wrapper"><div class="gallery-box"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/I1AGQW1CHcc" frameborder="0" allowfullscreen></iframe></div><div class="gallery-label">تعديل الالوان</div></div>
         <div class="gallery-item-wrapper"><div class="gallery-box"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/0kVS42c33l8" frameborder="0" allowfullscreen></iframe></div><div class="gallery-label">انتقالات قصيرة</div></div>
     </div></div></div>
 
@@ -182,14 +182,82 @@ header {
         <div class="gallery-item-wrapper"><div class="gallery-box"><img src="sma.jpg"></div><div class="gallery-label">غيوم</div></div>
     </div></div></div>
 
-    <div id="motion-modal" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('motion-modal')">&times;</span><h2 style="color:var(--primary)">معرض الموشن</h2><div class="modal-gallery">
-        <div class="gallery-item-wrapper"><div class="gallery-box"><video src="sheaar.mp4"></video></div><div class="gallery-label">شعار</div></div>
-        <div class="gallery-item-wrapper"><div class="gallery-box"><video src="infoghraphek.mp4"></video></div><div class="gallery-label">انفوجرافيك</div></div>
-        <div class="gallery-item-wrapper"><div class="gallery-box"><video src="taqledi.mp4"></video></div><div class="gallery-label">موشن تقليدي</div></div>
-        <div class="gallery-item-wrapper"><div class="gallery-box"><video src="2d motion.mp4"></video></div><div class="gallery-label">2D</div></div>
-        <div class="gallery-item-wrapper"><div class="gallery-box"><video src="motion.MP4"></video></div><div class="gallery-label">مقدمة</div></div>
-        <div class="gallery-item-wrapper"><div class="gallery-box"><video src="elaan.mp4"></video></div><div class="gallery-label">إعلان</div></div>
-    </div></div></div>
+<!-- 5. معرض الموشن (نسخة مصلحة لتعمل بالنقر) -->
+<div id="motion-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('motion-modal')">&times;</span>
+        <h2 style="color:var(--primary)">معرض الموشن</h2>
+        <div class="modal-gallery">
+
+            <!-- الفيديو 1 -->
+            <div class="gallery-item-wrapper">
+                <div class="gallery-box">
+                    <video preload="metadata" onclick="this.paused ? this.play() : this.pause();">
+                        <source src="sheaar.mp4" type="video/mp4">
+                    </video>
+                    <div class="play-overlay">▶</div>
+                </div>
+                <div class="gallery-label">شعار</div>
+            </div>
+
+            <!-- الفيديو 2 -->
+            <div class="gallery-item-wrapper">
+                <div class="gallery-box">
+                    <video preload="metadata" onclick="this.paused ? this.play() : this.pause();">
+                        <source src="infoghraphek.mp4" type="video/mp4">
+                    </video>
+                    <div class="play-overlay">▶</div>
+                </div>
+                <div class="gallery-label">انفوجرافيك</div>
+            </div>
+
+            <!-- الفيديو 3 -->
+            <div class="gallery-item-wrapper">
+                <div class="gallery-box">
+                    <video preload="metadata" onclick="this.paused ? this.play() : this.pause();">
+                        <source src="taqledi.mp4" type="video/mp4">
+                    </video>
+                    <div class="play-overlay">▶</div>
+                </div>
+                <div class="gallery-label">موشن تقليدي</div>
+            </div>
+
+            <!-- الفيديو 4 -->
+            <div class="gallery-item-wrapper">
+                <div class="gallery-box">
+                    <video preload="metadata" onclick="this.paused ? this.play() : this.pause();">
+                        <source src="2d motion.mp4" type="video/mp4">
+                    </video>
+                    <div class="play-overlay">▶</div>
+                </div>
+                <div class="gallery-label">2D</div>
+            </div>
+
+            <!-- الفيديو 5 -->
+            <div class="gallery-item-wrapper">
+                <div class="gallery-box">
+                    <video preload="metadata" onclick="this.paused ? this.play() : this.pause();">
+                        <source src="motion.MP4" type="video/mp4">
+                    </video>
+                    <div class="play-overlay">▶</div>
+                </div>
+                <div class="gallery-label">مقدمة</div>
+            </div>
+
+            <!-- الفيديو 6 -->
+            <div class="gallery-item-wrapper">
+                <div class="gallery-box">
+                    <video preload="metadata" onclick="this.paused ? this.play() : this.pause();">
+                        <source src="elaan.mp4" type="video/mp4">
+                    </video>
+                    <div class="play-overlay">▶</div>
+                </div>
+                <div class="gallery-label">إعلان</div>
+            </div>
+
+        </div>
+    </div>
+</div>
 
     <div id="web-modal" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('web-modal')">&times;</span><h2 style="color:var(--primary)">معرض الويب</h2><div class="modal-gallery">
         <div class="gallery-item-wrapper"><div class="gallery-box"><img src="wajha.png"></div><div class="gallery-label">واجهة</div></div>
@@ -215,7 +283,7 @@ header {
     <footer>
         <div class="signature">تصميم الطالبة: بتول مروان شملخ</div>
         <div style="font-size: 1.1rem; color: #bbb; margin-top: 8px;">مديرة المدرسة: الدكتورة نبيلة فريحات</div>
-        <p style="color: var(--primary); margin-top: 25px; font-weight: bold;">المركز الأول على المملكة - BTEC Creative Media</p>
+        <p style="color: var(--primary); margin-top: 25px; font-weight: bold;">نسعى دائما على المركز الأول على المملكة - BTEC Creative Media</p>
         <p style="margin-top: 40px; font-size: 0.8rem; color: #444;">&copy; 2026 جميع الحقوق محفوظة</p>
     </footer>
 
