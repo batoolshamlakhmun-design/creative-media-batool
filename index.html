@@ -148,14 +148,48 @@
     </div></div></div>
 
     <!-- 2. المونتاج (روابط درايف المباشرة) -->
-    <div id="edit-modal" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('edit-modal')">&times;</span><h2 style="color:var(--primary)">معرض المونتاج الرقمي</h2><div class="modal-gallery">
-        <div class="gallery-item-wrapper"><div class="gallery-box"><video preload="metadata" onclick="this.paused ? this.play() : this.pause();"><source src="wathaeqe.MOV"></video><div class="play-overlay">▶</div></div><div class="gallery-label">وثائقي by batool</div></div>
-        <div class="gallery-item-wrapper"><div class="gallery-box"><video preload="metadata" onclick="this.paused ? this.play() : this.pause();"><source src="https://drive.google.com/uc?export=download&id=1MIqXcAvGCa7uQodE75CI_3bZJYbSRvgl"></video><div class="play-overlay">▶</div></div><div class="gallery-label">فيديو ترويجي by batool</div></div>
-        <div class="gallery-item-wrapper"><div class="gallery-box"><video preload="metadata" onclick="this.paused ? this.play() : this.pause();"><source src="calor.mp4"></video><div class="play-overlay">▶</div></div><div class="gallery-label">تعديل ألوان by hala</div></div>
-        <div class="gallery-item-wrapper"><div class="gallery-box"><video preload="metadata" onclick="this.paused ? this.play() : this.pause();"><source src="https://drive.google.com/uc?export=download&id=1mceXWZT-2RH37gby40vVFmryDmY6of72"></video><div class="play-overlay">▶</div></div><div class="gallery-label">انتقالات بصرية</div></div>
-        <div class="gallery-item-wrapper"><div class="gallery-box"><video preload="metadata" onclick="this.paused ? this.play() : this.pause();"><source src="https://drive.google.com/uc?export=download&id=1ax2IJ6dZ0-m3FXES-decj5qzX4Bj74Hq"></video><div class="play-overlay">▶</div></div><div class="gallery-label">هندسة صوت by yasmeen</div></div>
-        <div class="gallery-item-wrapper"><div class="gallery-box"><video preload="metadata" onclick="this.paused ? this.play() : this.pause();"><source src="https://drive.google.com/uc?export=download&id=1sko0tSisK6CoffQd5C1kKjVpuJ0-3tte"></video><div class="play-overlay">▶</div></div><div class="gallery-label">خلف الكواليس by batool</div></div>
-    </div></div></div>
+  <!-- 2. المونتاج الرقمي (روابط يوتيوب المحدثة) -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('edit-modal')">&times;</span>
+            <h2 style="color:var(--primary)">معرض المونتاج الرقمي</h2>
+            <p class="modal-header-desc">إتقان فنون القص وتعديل الفيديو وتصحيح الألوان لإخراج أعمال مرئية متكاملة.</p>
+            
+            <div class="modal-gallery">
+                <!-- الفيديو 1 -->
+                <div class="gallery-item-wrapper">
+                    <div class="gallery-box">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/RVUjh6l1sXk" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="gallery-label">فيلم وثائقي by batool</div>
+                </div>
+
+                <!-- الفيديو 2 -->
+                <div class="gallery-item-wrapper">
+                    <div class="gallery-box">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/cfjknpdPhEs" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="gallery-label">فيديو ترويجي by batool</div>
+                </div>
+
+                <!-- الفيديو 3 -->
+                <div class="gallery-item-wrapper">
+                    <div class="gallery-box">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/VfVMnirdiEM" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="gallery-label">تعديل ألوان وإخراج</div>
+                </div>
+
+                <!-- الفيديو 4 (Shorts) -->
+                <div class="gallery-item-wrapper">
+                    <div class="gallery-box">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/0kVS42c33l8" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="gallery-label">انتقالات بصرية قصيرة</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- 3. مادة الطباعة -->
     <div id="print-modal" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('print-modal')">&times;</span><h2 style="color:var(--primary)">معرض مادة الطباعة</h2><div class="modal-gallery">
